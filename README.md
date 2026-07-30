@@ -1,40 +1,482 @@
-<h1 align="center">Hi, I'm Sarah Barnes 👋</h1> <h3 align="center">HRIS Leader | Manager, HRIS at Kwantlen Polytechnic University</h3> <p align="center"> 15+ years driving HR technology transformation across higher education and private industry — from payroll floors to enterprise systems leadership. </p>
-🚀 About Me
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarah Barnes — HRIS Leader</title>
+<meta name="description" content="Sarah Barnes — HRIS Leader specializing in enterprise HR systems strategy, implementation, and governance.">
+<style>
 
-I'm a strategic HR and technology leader with over 15 years of experience driving organizational transformation across higher education and private sectors. I specialize in leading cross-functional teams, implementing enterprise HR systems, and building the governance frameworks that keep them running. Most of my career has been spent navigating competing priorities, facilitating change, and translating complex system requirements into practical solutions for the people who use them every day.
+  :root{
+    --bg: #fafafa;
+    --card: #ffffff;
+    --heading: #4b5563;
+    --heading-dark: #374151;
+    --body: #5b6bb8;
+    --body-soft: #7581c9;
+    --muted: #8b93a6;
+    --shadow: 0 10px 30px rgba(90,100,150,0.10);
+    --shadow-sm: 0 4px 14px rgba(90,100,150,0.08);
+    --radius: 22px;
+    --pill-radius: 999px;
+  }
 
-I'm passionate about applying systemic thinking and evidence-based strategies to solve organizational challenges and build inclusive, resilient workplaces.
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
 
-🏆 Featured Projects & Accomplishments
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--body);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
 
-🎓 KPU Banner Cloud Migration Project Led the migration of Ellucian Banner HR to the cloud. 🏅 Winner — Team Award
+  a{ color: inherit; }
+  ::selection{ background: #d7dcfb; }
+  :focus-visible{ outline: 2px solid var(--body); outline-offset: 3px; }
 
-💼 Workday Implementation — Sunbelt Rentals of Canada Core member of the design and implementation team bringing Workday online for Canadian operations.
+  h1,h2,h3{ color: var(--heading); margin:0; font-weight: 700; }
 
-⏱️ Dayforce HCM Implementation — Silver Hills Bakery Implementation leader across multiple Dayforce modules (Recruitment, HR, Payroll, Timekeeping, Onboarding) spanning both Canada and the U.S. Later served as lead System Administrator for the platform.
+  .container{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
 
-🧭 Ellucian Banner HR — Lead System Administrator Configuration, testing, and delivery of new Banner business processes; technical lead on medium-to-large projects from design through implementation. Also served as Divisional Security Manager (DSM) for Banner HR.
+  /* NAV */
+  nav{
+    position: sticky; top:0; z-index: 50;
+    background: rgba(250,250,250,0.85);
+    backdrop-filter: blur(8px);
+  }
+  nav .container{
+    display:flex; align-items:center; justify-content: space-between;
+    height: 88px;
+  }
+  .brand{ display:flex; align-items:center; gap: 14px; }
+  .avatar{
+    width: 44px; height: 44px; border-radius: 14px;
+    background: linear-gradient(135deg, #eef0fb, #ffffff);
+    box-shadow: var(--shadow-sm);
+  }
+  .brand-name{ color: var(--heading-dark); font-weight: 700; font-size: 1.05rem; }
+  .nav-links{ display:flex; gap: 32px; list-style:none; margin:0; padding:0; }
+  .nav-links a{ text-decoration:none; color: var(--muted); font-size: 0.95rem; transition: color 0.15s ease; }
+  .nav-links a:hover{ color: var(--body); }
+  @media (max-width: 640px){
+    .nav-links{ gap: 16px; }
+    .nav-links a{ font-size: 0.82rem; }
+  }
 
-📋 Taleo Applicant Tracking System Implementation Core team member on the ATS implementation supporting recruitment operations.
+  /* HERO */
+  .hero{ padding: 40px 0 60px; }
+  .hero h1{
+    font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+    letter-spacing: -0.01em;
+    margin-bottom: 22px;
+  }
+  .hero p.lede{
+    max-width: 62ch;
+    color: var(--body);
+    font-size: 1.08rem;
+  }
+  .hero-cta{ margin-top: 30px; }
 
-💼 Career Snapshot
-Manager, HRIS — Kwantlen Polytechnic University (2022–Present)
-HRIS Administrator — Kwantlen Polytechnic University (2019–2021)
-Specialist, Payroll & HRIS — Silver Hills Bakery (2019)
-Payroll & Benefits Coordinator — Silver Hills Bakery (2018–2019)
-Payroll & Benefits Administrator — Sunbelt Rentals of Canada (2016–2018)
-7+ years in payroll systems consulting and administration prior (ADP Canada, Britco, Retirement Concepts, and others)
-🎓 Education & Certifications
-📜 Certified Payroll Manager (CPM)
-📜 Payroll Compliance Practitioner (PCP)
-📜 Human Resources Management Certificate — Simon Fraser University
-📜 Project & Change Management Professional Certificate — Royal Roads University (in progress)
-📚 Relevant coursework — BCIT (Employment Law, Total Compensation & Benefits, Accounting) and Royal Roads (Academic Writing & Critical Thinking, Project Management Essentials)
-🛠️ Core Skills & Systems
+  .pill-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background: var(--card);
+    border: 1px solid #1f2430;
+    color: var(--heading-dark);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 26px;
+    border-radius: var(--pill-radius);
+    text-decoration:none;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .pill-btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+  .pill-btn.quiet{ border-color: #e2e4ef; font-weight: 600; }
 
-Workday · Dayforce · Ellucian Banner · ADP Systems · SQL · FAST Reporting · HRIS Leadership & Governance · Systems Implementation & Integration · Workforce Analytics · Process Automation · Change Management · Payroll Compliance (Canada & U.S.)
+  .tag-row{
+    margin-top: 44px;
+    display:flex; flex-wrap:wrap;
+    gap: 14px 28px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .tag-row span{ white-space:nowrap; }
 
-📫 Let's Connect
-💼 LinkedIn: linkedin.com/in/sarahbarnes-hris
-✉️ Email: sbarneswork@gmail.com
-<p align="center"><i>⭐ Open to connecting with fellow HR tech professionals and systems leaders.</i></p>
+  /* WHAT-I-DO CARD */
+  .intro-card{
+    margin-top: 48px;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 40px;
+  }
+  .intro-card h2{ font-size: 1.4rem; margin-bottom: 16px; }
+  .intro-card p{ color: var(--body); max-width: 68ch; }
+  .intro-card .pill-btn{ margin-top: 26px; }
+
+  /* SECTION SHELL */
+  section{ padding: 70px 0; }
+  section h2.section-title{
+    font-size: 1.7rem;
+    margin-bottom: 34px;
+  }
+
+  .reveal{ opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible{ opacity:1; transform: translateY(0); }
+
+  /* ABOUT */
+  .about-text{ max-width: 70ch; color: var(--body); }
+  .about-text p + p{ margin-top: 18px; }
+
+  /* SKILLS */
+  .skills-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 640px){ .skills-grid{ grid-template-columns: 1fr; } }
+  .skill-card{
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 28px 30px;
+  }
+  .skill-card h3{ font-size: 1.1rem; color: var(--heading-dark); margin-bottom: 10px; }
+  .skill-card p{ margin:0; color: var(--body); font-size: 0.96rem; }
+
+  /* PROJECTS */
+  .project-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 640px){ .project-grid{ grid-template-columns: 1fr; } }
+  .project-card{
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 30px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .project-card:hover{ transform: translateY(-3px); box-shadow: var(--shadow); }
+  .project-icon{
+    width: 60px; height: 60px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #eef0fb, #f7f2ea);
+    box-shadow: var(--shadow-sm);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .project-icon svg{ width: 28px; height: 28px; }
+  .project-card h3{ font-size: 1.12rem; color: var(--heading-dark); margin-bottom: 10px; }
+  .project-card p{ margin:0 0 16px; color: var(--body); font-size: 0.95rem; }
+  .tag-pills{ display:flex; flex-wrap:wrap; gap: 8px; margin-bottom: 6px; }
+  .tag-pill{
+    font-size: 0.78rem;
+    color: var(--muted);
+    background: #f2f3fb;
+    padding: 5px 12px;
+    border-radius: var(--pill-radius);
+  }
+  .badge-award{
+    display:inline-block;
+    margin-top: 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #8a6a3f;
+    background: #faf1e2;
+    padding: 5px 12px;
+    border-radius: var(--pill-radius);
+  }
+
+  /* CONTACT */
+  .contact-grid{
+    display:grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 720px){ .contact-grid{ grid-template-columns: 1fr; } }
+  .contact-card{
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 34px;
+  }
+  .field{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e7e8f2;
+    padding: 12px 4px;
+    margin-bottom: 6px;
+    font-size: 0.98rem;
+    font-family: inherit;
+    color: var(--heading-dark);
+    background: transparent;
+  }
+  .field:focus{ outline:none; border-bottom-color: var(--body); }
+  textarea.field{ resize: vertical; min-height: 90px; margin-top: 14px; }
+  .contact-card form{ display:flex; flex-direction:column; }
+  .send-btn{
+    margin-top: 22px;
+    align-self: flex-start;
+    background: transparent;
+    border: 1.5px solid #1f2430;
+    color: var(--heading-dark);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 30px;
+    border-radius: var(--pill-radius);
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .send-btn:hover{ background: #1f2430; color: #fff; }
+  .contact-card h3{ font-size: 1.05rem; color: var(--heading-dark); margin-bottom: 14px; }
+  .elsewhere-links{ font-size: 0.98rem; }
+  .elsewhere-links a{ color: #3fae7a; text-decoration: none; font-weight: 600; }
+  .elsewhere-links a:hover{ text-decoration: underline; }
+  .elsewhere-note{ margin-top: 16px; color: var(--body); font-size: 0.92rem; }
+
+  footer{
+    padding: 40px 0 60px;
+    text-align:left;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="brand">
+      <div class="avatar"></div>
+      <span class="brand-name">Sarah Barnes</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="home" class="hero">
+  <div class="container">
+    <h1>Hi, I'm Sarah</h1>
+    <p class="lede">I lead HRIS strategy and enterprise systems for a mid-size university, with 15+ years across HR technology, payroll, and change management. Recent work includes managing the strategic roadmap for Ellucian Banner HR, leading a cloud migration recognized with a Team Award, and delivering Workday and Dayforce implementations spanning Canada and the U.S. I specialize in bridging HR operations and enterprise technology, with a strong grounding in workforce reporting and data integrity.</p>
+    <div class="hero-cta">
+      <a class="pill-btn" href="#projects">See Projects</a>
+    </div>
+    <div class="tag-row">
+      <span>Ellucian Banner &amp; Workday</span>
+      <span>Dayforce HCM</span>
+      <span>Payroll Compliance (Canada &amp; U.S.)</span>
+      <span>Change Management &amp; Training</span>
+    </div>
+
+    <div class="intro-card">
+      <h2>What I do</h2>
+      <p>Turn HR operational needs into working systems. I gather requirements, build governance frameworks, and coordinate cross-functional teams to configure and deploy the platforms that run people operations &mdash; Banner, Workday, and Dayforce among them. My work includes leading system implementations end-to-end, overseeing training and onboarding, building workforce reporting, and ensuring payroll compliance across borders.</p>
+      <a class="pill-btn quiet" href="mailto:sbarneswork@gmail.com">Download Resume</a>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title reveal">About</h2>
+    <div class="about-text reveal">
+      <p>Since 2022 I have served as Manager, HRIS at Kwantlen Polytechnic University. In this role I provide overall management of HRIS technologies including Ellucian Banner HR and Millennium FAST, supervise the HRIS team, and set strategic priorities for the department. I collaborate with key parties across HR to build and maintain the strategic roadmap for Banner, and work with HR leadership to develop people analytics supporting all subsidiaries. I also serve as Divisional Security Manager for Banner HR and led the team through a cloud migration project recognized with a Team Award.</p>
+      <p>From 2019 to 2021 I was HRIS Administrator at KPU, acting as lead System Administrator for Banner HR &mdash; configuring new business processes, serving as technical lead on medium-to-large projects, and supporting the Taleo applicant tracking system implementation.</p>
+      <p>Earlier in my career I led HRIS and payroll operations at Silver Hills Bakery, where I was implementation leader for multiple Dayforce modules (Recruitment, HR, Payroll, Timekeeping, Onboarding) across both Canada and the U.S., and at Sunbelt Rentals of Canada, where I was part of the design and implementation team for Workday Canada while managing payroll for 700+ employees. Before that, I spent seven-plus years in payroll systems consulting and administration, including at ADP Canada.</p>
+      <p>I hold a Human Resources Management Certificate from Simon Fraser University, and I'm currently completing a Project &amp; Change Management Professional Certificate through Royal Roads University. I'm also a Certified Payroll Manager (CPM) and Payroll Compliance Practitioner (PCP).</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title reveal">Skills</h2>
+    <div class="skills-grid reveal">
+      <div class="skill-card">
+        <h3>HRIS Leadership &amp; Governance</h3>
+        <p>Strategic roadmapping, systems governance, team leadership, stakeholder engagement, training &amp; development.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Platforms</h3>
+        <p>Ellucian Banner HR, Workday, Dayforce HCM, ADP Systems, Millennium FAST, Taleo.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Data &amp; Reporting</h3>
+        <p>SQL, workforce analytics, custom reporting, data integrity &amp; validation, process automation.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Payroll &amp; Compliance</h3>
+        <p>Canada &amp; U.S. payroll compliance, benefits administration, collective agreements, year-end &amp; regulatory filings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title reveal">Projects</h2>
+    <div class="project-grid reveal">
+
+      <div class="project-card">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5b6bb8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.5-8.97A5.5 5.5 0 0 1 17.3 8.03 4 4 0 0 1 17 16H7Z"/><path d="M12 12v5M9.5 14.5 12 12l2.5 2.5" opacity="0.55"/></svg>
+        </div>
+        <h3>KPU Banner Cloud Migration</h3>
+        <p>Led the migration of Ellucian Banner HR to the cloud, coordinating configuration, testing, and change management across the HRIS team.</p>
+        <div class="tag-pills">
+          <span class="tag-pill">Ellucian Banner</span>
+          <span class="tag-pill">Cloud Migration</span>
+        </div>
+        <span class="badge-award">Team Award Winner</span>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5b6bb8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="7" height="7" rx="1.4"/><rect x="13.5" y="4" width="7" height="7" rx="1.4" opacity="0.55"/><rect x="3.5" y="14" width="7" height="7" rx="1.4" opacity="0.55"/><rect x="13.5" y="14" width="7" height="7" rx="1.4"/></svg>
+        </div>
+        <h3>Workday Implementation</h3>
+        <p>Core member of the design and implementation team bringing Workday online for Canadian operations at Sunbelt Rentals, from configuration through go-live.</p>
+        <div class="tag-pills">
+          <span class="tag-pill">Workday</span>
+          <span class="tag-pill">System Design</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5b6bb8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2" opacity="0.55"/></svg>
+        </div>
+        <h3>Dayforce HCM Implementation</h3>
+        <p>Led implementation across Recruitment, HR, Payroll, Timekeeping, and Onboarding modules spanning Canada and the U.S., including custom SQL reporting for stakeholders.</p>
+        <div class="tag-pills">
+          <span class="tag-pill">Dayforce</span>
+          <span class="tag-pill">SQL Reporting</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5b6bb8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="8" r="3"/><path d="M4 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" opacity="0.55"/><circle cx="17.5" cy="8.5" r="4" opacity="0.4"/></svg>
+        </div>
+        <h3>Taleo ATS Implementation</h3>
+        <p>Core team member on the Applicant Tracking System implementation supporting recruitment operations at KPU, from testing through rollout.</p>
+        <div class="tag-pills">
+          <span class="tag-pill">Taleo</span>
+          <span class="tag-pill">Recruitment Tech</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title reveal">Contact</h2>
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <!-- Connected to Formspree — submissions are sent to sbarneswork@gmail.com -->
+        <form id="contactForm" action="https://formspree.io/f/mlgqkjza" method="POST">
+          <input class="field" type="text" name="name" placeholder="Your Name" required>
+          <input class="field" type="email" name="email" placeholder="Your Email" required>
+          <textarea class="field" name="message" placeholder="Your Message" required></textarea>
+          <button class="send-btn" type="submit">Send Message</button>
+          <p id="formStatus" style="margin-top:14px; font-size:0.88rem; display:none;"></p>
+        </form>
+      </div>
+      <div class="contact-card">
+        <h3>Elsewhere</h3>
+        <div class="elsewhere-links">
+          <a href="http://www.linkedin.com/in/sarahbarnes-hris" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="elsewhere-note">Prefer email for quick responses &mdash; sbarneswork@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    &copy; <span id="year"></span> Sarah Barnes
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  if(contactForm){
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = contactForm.querySelector('.send-btn');
+      const originalText = btn.textContent;
+
+      if(contactForm.action.includes('YOUR_FORM_ID')){
+        formStatus.style.display = 'block';
+        formStatus.style.color = '#b3541e';
+        formStatus.textContent = 'Form isn\'t connected yet — add your Formspree ID in the code to activate this.';
+        return;
+      }
+
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try{
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        formStatus.style.display = 'block';
+        if(res.ok){
+          formStatus.style.color = '#3fae7a';
+          formStatus.textContent = 'Thanks — your message has been sent!';
+          contactForm.reset();
+        } else {
+          formStatus.style.color = '#b3541e';
+          formStatus.textContent = 'Something went wrong. Please try again or email directly.';
+        }
+      } catch(err){
+        formStatus.style.display = 'block';
+        formStatus.style.color = '#b3541e';
+        formStatus.textContent = 'Something went wrong. Please try again or email directly.';
+      } finally {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
+    });
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
